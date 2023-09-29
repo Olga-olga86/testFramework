@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class NewIssuePage extends BasePage{
-
+    private final static String TITLE = "New issue page";
 private By writeComment = By.xpath("//*[@id=\"new_issue\"]/div/div/div[1]/div/div[1]/div/tab-container/div[1]/div/button[1]");
     private By titleFieldLocator = By.xpath("//*[@id=\"issue_title\"]");
     private By leaveACommentLocator =By.xpath("//*[@id=\"issue_body\"]");
@@ -22,6 +22,6 @@ private By writeComment = By.xpath("//*[@id=\"new_issue\"]/div/div/div[1]/div/di
 
     }
     public NewIssuePage(WebDriver driver) {
-        super(driver);
+        super(driver, TITLE);
     }
 }
